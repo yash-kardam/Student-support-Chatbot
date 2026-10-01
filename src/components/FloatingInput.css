@@ -1,0 +1,214 @@
+.floating-input-container {
+  position: fixed;
+  bottom: 40px;
+  left: 260px;
+  width: calc(100% - 260px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 50;
+  gap: 8px;
+}
+
+/* ── Context picker dropdown ─────────────────────────────────── */
+.context-picker {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  padding: 8px;
+  width: 100%;
+  max-width: 480px;
+  pointer-events: auto;
+  animation: pickerFadeIn 0.18s ease-out forwards;
+}
+
+@keyframes pickerFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.context-picker-header {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-lighter);
+  padding: 4px 8px 8px;
+}
+
+.context-picker-section {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-lighter);
+  padding: 8px 8px 4px;
+}
+
+.context-picker-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 10px;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+.context-picker-item:hover {
+  background: var(--bg-app);
+}
+
+.ctx-icon {
+  flex-shrink: 0;
+}
+.tasks-icon  { color: #7c3aed; }
+.resource-icon { color: #0284c7; }
+
+.ctx-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.ctx-item-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+.ctx-item-sub {
+  font-size: 0.75rem;
+  color: var(--text-lighter);
+}
+.ctx-empty {
+  font-size: 0.85rem;
+  color: var(--text-lighter);
+  padding: 10px;
+  text-align: center;
+}
+
+/* ── Main input wrapper ──────────────────────────────────────── */
+.floating-input-wrapper {
+  background: var(--bg-card);
+  border-radius: 9999px;
+  padding: 6px 6px 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: var(--shadow-float);
+  border: 1px solid var(--border-light);
+  pointer-events: auto;
+  flex-wrap: nowrap;
+  transition: border-color 0.2s ease;
+}
+.floating-input-wrapper:focus-within {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.08), var(--shadow-float);
+}
+
+/* ── Attached context pill ───────────────────────────────────── */
+.attached-ctx-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #ede9fe;
+  color: #7c3aed;
+  border-radius: 999px;
+  padding: 3px 8px 3px 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.attached-ctx-pill span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ctx-remove {
+  background: none;
+  border: none;
+  color: #7c3aed;
+  padding: 0 1px;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.ctx-remove:hover { opacity: 1; }
+
+.spark-icon-wrapper {
+  color: #a855f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stratify-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  padding: 8px 0;
+  min-width: 0;
+}
+.stratify-input::placeholder { color: var(--text-lighter); }
+
+/* ── Context attach button ───────────────────────────────────── */
+.ctx-attach-btn {
+  background: transparent;
+  color: var(--text-lighter);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  flex-shrink: 0;
+}
+.ctx-attach-btn:hover {
+  background: var(--bg-app);
+  color: #a855f7;
+}
+.ctx-attach-active {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+/* ── Send button ─────────────────────────────────────────────── */
+.submit-arrow-btn {
+  background-color: var(--bg-app);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.submit-arrow-btn:hover {
+  background-color: #a855f7;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .floating-input-container {
+    left: 0;
+    width: 100%;
+    bottom: 20px;
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Colors */
+  --bg-app: #F8FAFC; /* Subtle off-white for main area */
+  --bg-sidebar: #FFFFFF;
+  --bg-card: #FFFFFF;
+  
+  /* Accents */
+  --accent-blue-bg: #E0F2FE;
+  --accent-blue-text: #0284C7;
+  --accent-yellow-bg: #FEF3C7;
+  --accent-yellow-text: #B45309;
+  
+  /* Text */
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --text-lighter: #94A3B8;
+  
+  /* Message Bubbles */
+  --user-bubble-bg: var(--accent-blue-bg);
+  --user-bubble-text: var(--accent-blue-text);
+  --bot-bubble-bg: #FFFFFF;
+  --bot-bubble-border: var(--border-light);
+  --bot-bubble-text: var(--text-main);
+  
+  /* Borders & Shadows */
+  --border-light: #E2E8F0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-float: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+  
+  /* Status Pills */
+  --status-urgent-bg: #FEE2E2;
+  --status-urgent-text: #DC2626;
+  --status-progress-bg: #DBEAFE;
+  --status-progress-text: #2563EB;
+  --status-todo-bg: #F1F5F9;
+  --status-todo-text: #475569;
+  --status-today-bg: #FFEDD5;
+  --status-today-text: #C2410C;
+  --status-tomorrow-bg: #D1FAE5;
+  --status-tomorrow-text: #059669;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+html, body, #root {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.5);
+}
+
+/* Shared Card Style */
+.card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+}

@@ -1,0 +1,112 @@
+# ==========================================
+# System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Logs and Diagnostics
+# ==========================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ==========================================
+# Node / Package Manager Dependencies
+# ==========================================
+node_modules/
+/jspm_packages/
+/web_modules/
+.npm
+.eslintcache
+.stylelintcache
+.oxlintcache
+.prettiercache
+
+# ==========================================
+# Build and Output Directories
+# ==========================================
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist
+.vitepress/dist
+.serverless/
+target/
+
+# ==========================================
+# Vite / Tooling Cache
+# ==========================================
+.vite/
+.cache/
+.parcel-cache/
+.turbo/
+.tsbuildinfo
+.rslib/
+coverage/
+.nyc_output/
+
+# ==========================================
+# Environment Variables & Secrets (CRITICAL)
+# ==========================================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.*.local
+*.env
+*.env.*
+.env.staging
+.env.staging.local
+
+# ==========================================
+# Supabase Local Development
+# ==========================================
+supabase/.temp/
+supabase/.branches/
+supabase/functions/.import_map.json
+
+# ==========================================
+# IDE / Editors
+# ==========================================
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+.history/
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+
+# Visual Studio / other editors
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swo
+*.swp
+
+# ==========================================
+# IDE / Agent specific
+# ==========================================
+.gemini/
+.agents/

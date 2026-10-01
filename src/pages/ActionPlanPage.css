@@ -1,0 +1,243 @@
+.action-plan-page {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.page-header {
+  margin-top: 10px;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.add-task-form {
+  padding: 16px 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task-input-field {
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  outline: none;
+  background-color: var(--bg-app);
+}
+
+.task-select {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  background-color: white;
+  outline: none;
+}
+
+.add-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.add-btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.task-filters-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.search-filter-box {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  border: 1px solid var(--border-light);
+  border-radius: 9999px;
+  padding: 6px 16px;
+}
+
+.filter-icon {
+  color: var(--text-muted);
+}
+
+.filter-dropdown select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.prioritize-btn-large {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FAF5FF;
+  color: #9333EA;
+  border: 1px solid #E9D5FF;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.prioritize-btn-large:hover {
+  background-color: #F3E8FF;
+}
+
+.prioritize-btn-large:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tasks-list-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.empty-tasks {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.task-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-light);
+  transition: background 0.2s;
+}
+
+.task-item-row:hover {
+  background-color: var(--bg-app);
+}
+
+.task-item-row:last-child {
+  border-bottom: none;
+}
+
+.task-item-row.completed .task-title-text {
+  text-decoration: line-through;
+  color: var(--text-lighter);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.check-btn {
+  color: var(--text-lighter);
+  display: flex;
+  align-items: center;
+}
+
+.check-icon-active {
+  color: #22c55e;
+}
+
+.check-icon-empty:hover {
+  color: var(--text-muted);
+}
+
+.task-title-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.task-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.delete-btn {
+  color: var(--text-lighter);
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+/* Badges */
+.badge-urgent {
+  background-color: var(--status-urgent-bg);
+  color: var(--status-urgent-text);
+}
+.badge-by-today {
+  background-color: var(--status-today-bg);
+  color: var(--status-today-text);
+}
+.badge-by-tomorrow {
+  background-color: var(--status-tomorrow-bg);
+  color: var(--status-tomorrow-text);
+}
+.badge-normal {
+  background-color: var(--bg-app);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+.badge-done {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.badge-to-do {
+  background-color: var(--bg-app);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+.badge-in-progress {
+  background-color: var(--status-progress-bg);
+  color: var(--status-progress-text);
+}

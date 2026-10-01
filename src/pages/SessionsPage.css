@@ -1,0 +1,284 @@
+.sessions-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tab-control-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tab-pills {
+  display: flex;
+  padding: 4px;
+  background-color: var(--border-light);
+  border-radius: 9999px;
+  border: none;
+}
+
+.tab-btn {
+  padding: 8px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 9999px;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  background-color: white;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.book-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.book-btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.book-session-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideDownFade 0.3s ease-out;
+}
+
+.book-session-form h3 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+}
+
+.booking-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.input-group input, .input-group select {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: white;
+}
+
+.form-action-row {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.submit-btn {
+  background-color: var(--accent-blue-text);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  background-color: var(--bg-app);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.session-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.session-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.session-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-pill {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.pill-academic {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.pill-wellbeing {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.pill-career {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.platform-tag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.session-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.session-title {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.session-instructor {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.session-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.session-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guest-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.guest-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  margin-right: -8px;
+  font-size: 0.95rem;
+}
+
+.avatar-excess {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 12px;
+}
+
+.join-session-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent-blue-bg);
+  color: var(--accent-blue-text);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.join-session-btn:hover {
+  background-color: #bae6fd;
+}
+
+.empty-events {
+  grid-column: 1 / -1;
+  padding: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.empty-icon {
+  color: var(--text-lighter);
+}
+
+.empty-events h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+
+.empty-events p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
