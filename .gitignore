@@ -76,6 +76,8 @@ coverage/
 *.env.*
 .env.staging
 .env.staging.local
+# Allow the example template
+!.env.example
 
 # ==========================================
 # Supabase Local Development
